@@ -44,6 +44,11 @@
 	};
 
 	const signInHandler = async () => {
+
+		// 自动添加 @wh.com 后缀
+		// if (email && !email.includes('@')) {
+		// 	email = `${email}@wh.com`;
+		// }
 		const sessionUser = await userSignIn(email, password).catch((error) => {
 			toast.error(`${error}`);
 			return null;
@@ -53,6 +58,11 @@
 	};
 
 	const signUpHandler = async () => {
+		// 自动添加 @wh.com 后缀
+		// if (email && !email.includes('@')) {
+		// 	email = `${email}@wh.com`;
+		// }
+
 		const sessionUser = await userSignUp(name, email, password, generateInitialsImage(name)).catch(
 			(error) => {
 				toast.error(`${error}`);
@@ -124,7 +134,7 @@
 
 <svelte:head>
 	<title>
-		{`${$i18n.t('智能助手')}`}
+		{`${$i18n.t('威海政务大模型')}`}
 	</title>
 </svelte:head>
 
@@ -165,7 +175,7 @@
 							class="flex items-center justify-center gap-3 text-xl sm:text-2xl text-center font-semibold dark:text-gray-200"
 						>
 							<div>
-								{$i18n.t('Signing in to {{WEBUI_NAME}}', { WEBUI_NAME: $i18n.t('智能助手') })}
+								{$i18n.t('Signing in to {{WEBUI_NAME}}', { WEBUI_NAME: $i18n.t('威海政务大模型') })}
 							</div>
 
 							<div>
@@ -185,19 +195,19 @@
 							<div class="mb-1">
 								<div class=" text-2xl font-medium">
 									{#if $config?.onboarding ?? false}
-									{$i18n.t(`Get started with {{WEBUI_NAME}}`, { WEBUI_NAME: '  ' })}
+										{$i18n.t(`Get started with {{WEBUI_NAME}}`, { WEBUI_NAME: '  ' })}
 									{:else if mode === 'ldap'}
-									{$i18n.t(`Sign in to {{WEBUI_NAME}} with LDAP`, { WEBUI_NAME: '  ' })}
+										{$i18n.t(`Sign in to {{WEBUI_NAME}} with LDAP`, { WEBUI_NAME: '  ' })}
 									{:else if mode === 'signin'}
-									{$i18n.t(`Sign in to {{WEBUI_NAME}}`, { WEBUI_NAME: '  ' })}
+										{$i18n.t(`Sign in to {{WEBUI_NAME}}`, { WEBUI_NAME: '  ' })}
 									{:else}
-									{$i18n.t(`Sign up to {{WEBUI_NAME}}`, { WEBUI_NAME: '  ' })}
+										{$i18n.t(`Sign up to {{WEBUI_NAME}}`, { WEBUI_NAME: '  ' })}
 									{/if}
 								</div>
 
 								<!-- {#if $config?.onboarding ?? false}
 									<div class=" mt-1 text-xs font-medium text-gray-500">
-										ⓘ {$i18n.t('智能助手')}
+										ⓘ {$i18n.t('威海政务大模型')}
 										{$i18n.t(
 											'does not make any external connections, and your data stays securely on your locally hosted server.'
 										)}
@@ -236,14 +246,14 @@
 										</div>
 									{:else}
 										<div class="mb-2">
-											<div class=" text-sm font-medium text-left mb-1">{$i18n.t('Email')}</div>
+											<div class=" text-sm font-medium text-left mb-1">{$i18n.t('Phone')}</div>
 											<input
 												bind:value={email}
-												type="email"
+												type="text"
 												class="my-0.5 w-full text-sm outline-none bg-transparent"
 												autocomplete="email"
 												name="email"
-												placeholder={$i18n.t('Enter Your Email')}
+												placeholder={$i18n.t('Enter Your Phone')}
 												required
 											/>
 										</div>

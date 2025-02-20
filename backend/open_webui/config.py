@@ -628,7 +628,7 @@ if CUSTOM_NAME:
             shutil.copy(splash_path, f"{STATIC_DIR}/splash.png") 
 
         # 如果需要自定义名称，可以直接从 CUSTOM_NAME 设置 
-        WEBUI_NAME = CUSTOM_NAME if CUSTOM_NAME else "智能助手" 
+        WEBUI_NAME = CUSTOM_NAME if CUSTOM_NAME else "威海政务大模型" 
 
     except Exception as e: 
         log.exception(e) 

@@ -47,7 +47,7 @@
 		<div>
 			<div class=" mb-2.5 text-sm font-medium flex space-x-2 items-center">
 				<div>
-					{$i18n.t('智能助手')}
+					{$i18n.t('威海政务大模型')}
 					{$i18n.t('Version')}
 				</div>
 			</div>
@@ -173,8 +173,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		</div>
 
 		<div class="mt-2 text-xs text-gray-400 dark:text-gray-500">
-			{#if !$i18n.t('智能助手').includes('Open WebUI')}
-				<span class=" text-gray-500 dark:text-gray-300 font-medium">{$i18n.t('智能助手')}</span> -
+			{#if !$i18n.t('威海政务大模型').includes('Open WebUI')}
+				<span class=" text-gray-500 dark:text-gray-300 font-medium">{$i18n.t('威海政务大模型')}</span> -
 			{/if}
 			{$i18n.t('Created by')}
 			<a

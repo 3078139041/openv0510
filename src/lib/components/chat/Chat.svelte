@@ -1854,8 +1854,8 @@
 <svelte:head>
 	<title>
 		{$chatTitle
-			? `${$chatTitle.length > 30 ? `${$chatTitle.slice(0, 30)}...` : $chatTitle} | ${$i18n.t('智能助手')}`
-			: `${$i18n.t('智能助手')}`}
+			? `${$chatTitle.length > 30 ? `${$chatTitle.slice(0, 30)}...` : $chatTitle} | ${$i18n.t('威海政务大模型')}`
+			: `${$i18n.t('威海政务大模型')}`}
 	</title>
 </svelte:head>
 

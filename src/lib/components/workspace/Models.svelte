@@ -199,7 +199,7 @@
 
 <svelte:head>
 	<title>
-		{$i18n.t('Models')} | {$i18n.t('智能助手')}
+		{$i18n.t('Models')} | {$i18n.t('威海政务大模型')}
 	</title>
 </svelte:head>
 
